@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Állatkert kezelőfelület</title>
+  </head>
+  <body>
+    <main>
+      <div class="lista">
+        <h2>Állatok</h2>
+        <br>
+        <table id="tablazat1">
+          <thead>
+            <tr class="headers">
+              <th class="idcol">#</th>
+              <th class="nevcol">Név</th>
+              <th class="fajcol">Faj</th>
+              <th class="korcol">Kor</th>
+              <th class="btncol"></th>
+            </tr>
+          </thead>
+          <tbody id="allatok">
+            
+          </tbody>
+          <tfoot>
+            <tr>
+              <form id="addform" action="/animals" method="POST">
+                <td></td>
+                <td><input id="addname" type="text"></td>
+                <td><input id="addspecies" type="text"></td>
+                <td><input id="addage" type="number" max="999" min="0"></td>
+                <td class="btncol"><button class="addbtn" id="addbtn">Hozzáadás</button></td>
+              </form>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="lista">
+        <h2>Fajok</h2>
+        <table id="tablazat2">
+          <thead>
+            <tr>
+              <th>Faj</th>
+              <th>Szám</th>
+            </tr>
+          </thead>
+          <tbody id="fajok">
+            <tr>
+              <td>clownfish</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
