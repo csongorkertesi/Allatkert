@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }).then(() => {
       allatokLekerdez();
       form.reset();
+    }).catch((error) => {
+      alert(`Sikertelen művelet! ${error}`);
     });
   });
 });
@@ -45,6 +47,8 @@ function allatokLekerdez(): void {
         `;
       });
       torolGombok();
+    }).catch((error) => {
+      alert(`Sikertelen művelet! ${error}`);
     });
   fetch(`${SERVER}/animals/bySpecies`)
     .then(response => response.json())
@@ -59,7 +63,9 @@ function allatokLekerdez(): void {
           </tr>
         `;
       });
-    });
+    }).catch((error) => {
+      alert(`Sikertelen művelet! ${error}`);
+    });;
 }
 
 function allatTorol(id: string) {
